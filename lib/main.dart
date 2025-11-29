@@ -1,4 +1,5 @@
 import 'package:business_card/pages/business_card.dart';
+import 'package:business_card/pages/my_card.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         resizeToAvoidBottomInset: false,
-        body: Center(child: BusinessCard()),
+        body: Center(child: MyCard(child: Column(),)),
       ),
     );
   }

@@ -1,30 +1,28 @@
 import 'package:business_card/components/text.dart';
 import 'package:flutter/material.dart';
 
-class BusinessCard extends StatelessWidget {
-  const BusinessCard({super.key});
+class MyCard extends StatelessWidget {
+  const MyCard({super.key, required Column child});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 350,
-      height: 200,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color: Colors.amberAccent,
-      ),
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(10),
-            child: Row(
-              children: [
-                CircleAvatar(
-                  radius: 50,
-                  backgroundImage: AssetImage('assets/images/cat-pfp.jpg'),
-                ),
+    return Card(
+      color: Colors.black,
+      child: SizedBox(
+        width: 400,
+        height: 200,
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(25),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    backgroundImage: AssetImage('assets/images/cat-pfp.jpg',),
+                    radius: 40,
+                  ),
 
-                Padding(
+                  Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: Column(
                     children: [
@@ -44,10 +42,12 @@ class BusinessCard extends StatelessWidget {
                     ],
                   ),
                 ),
-              ],
-            ),
-          ),
-        ],
+
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
